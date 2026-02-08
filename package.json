@@ -1,0 +1,23 @@
+{
+  "name": "prisma-postgres-api",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "prisma": {
+    "seed": "node seed.js"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "prisma:generate": "npx prisma generate",
+    "migrate": "npx prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.3.0",
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.18.0",
+    "prisma": "^5.22.0"
+  }
+}
